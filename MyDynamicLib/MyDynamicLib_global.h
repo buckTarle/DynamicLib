@@ -1,0 +1,12 @@
+#ifndef MYDYNAMICLIB_GLOBAL_H
+#define MYDYNAMICLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MYDYNAMICLIB_LIBRARY)
+#  define MYDYNAMICLIB_EXPORT Q_DECL_EXPORT
+#else
+#  define MYDYNAMICLIB_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MYDYNAMICLIB_GLOBAL_H
